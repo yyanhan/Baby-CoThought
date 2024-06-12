@@ -1,6 +1,6 @@
 # Baby-CoThought
 
-> (This repository with additional information for GESIS Methods Hub)
+> (This repository with additional information for GESIS Methods Hub, [see](https://github.com/yyanhan/Baby-CoThought/blob/main/README.md#baby-cothought-for-gesis-methods-hub))
 
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/yaanhaan/Baby-CoThought)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Data-green)](https://huggingface.co/datasets/yaanhaan/Baby-CoThought-Data)
