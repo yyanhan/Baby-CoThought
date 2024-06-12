@@ -86,7 +86,7 @@ If you found the resources in this repository useful, please cite:
 
 ## Description
 
-* Provide a brief and clear description of the method, its purpose, and what it aims to achieve. Add a link to a related paper from social science domain and show how your method can be applied to solve that research question. For example, 4TCT is a specialized tool designed for the efficient collection of textual data from the 4chan platform. It automates the process of gathering posts from various boards, aiming to facilitate research and analysis in social science and computational linguistics. This tool is particularly useful for analyzing online discourse, community dynamics, and trends within the 4chan ecosystem. It can support studies on topics like meme culture, information dissemination, and the impact of anonymous social media on public opinion.
+* This project provides a method to train a language model with low training resources, where the training data is augmented by LLM. 
 
 ## Keywords
 
@@ -97,11 +97,13 @@ If you found the resources in this repository useful, please cite:
 
 ## Science Usecase(s)
 
-* Include usecases from social sciences that would make this method applicable in a certain scenario. The use cases or research questions mentioned should arise from the latest social science literature cited in the description. For example, How to collect 4chan data from on political discourse from dates ..
+* when we need to calculate semantic similarity in a certain language or domain, but without a pre-trained model online, or a big training dataset, we can use this method to augment the training data. 
 
 ## Repo Structure
 
-* Explain the overall structure of the method, including directories, key files, and their functions. For example, The tool's architecture includes a src/ directory for core scripts, with requester.py handling data collection, board.py managing board-specific requests, and utils.py for auxiliary functions. Data is stored in a data/ directory created upon initiation, and documentation is available in docs/.
+* `Baby-CoThought/CNLU-EG`: the code to augment training data,
+* `Baby-CoThought/eval/` evaluation tools,
+* `Baby-CoThought/pretrain`: the code to pretrain
 
 ## Environment Setup
 
@@ -114,15 +116,31 @@ If you found the resources in this repository useful, please cite:
     openai
     ```
 ## Input Data
-1. data in text form
+
+* data in text form
+* we also need an OpenAI API to augment data
 
 ## Sample Input and Output Data
+
+* Sample Input Data: text
+    ```
+    Heather Wilson
+        Heather Ann Wilson (born December 30, 1960) is an American politician. Wilson was the 24th United States Secretary of the Air Force from May 16, 2017 through May 31, 2019. She served as President of the South Dakota School of Mines and Technology in Rapid City,     South Dakota. She is a former Republican member of the United States House of Representatives representing from 1998 to 2009. She was the first female military veteran elected to a full term in Congress.
+    After leaving Congress she was leading consulting firm Heather Wilson &amp; Company.
+    On January 23, 2017, President Donald Trump announced his intentions to nominate Wilson as Secretary of the Air Force. The United States Senate confirmed her nomination on May 8, 2017.
+    On March 8, 2019, Wilson said that she would resign as Secretary, on May 31, 2019, in order to become President of the University of Texas at El Paso.
+    ```
+* Output model: test on `https://huggingface.co/yaanhaan/Baby-CoThought`
 
    
 ## How to Use
 
 1. prepare your data, as long as your data is in text form. 
-2. 
+2. to train `RoBERTa` model, you can use
+3. to augment training data with OpenAI LLM, you can use/modify [prompt](https://github.com/oooranz/Baby-CoThought/blob/main/CNLU-EG/prompts/text.py), and run this [shell code](CNLU-EG/scripts/text/cot_sampling.sh)
+4. concatenate with augmented data with [code](CNLU-EG/data/text/cat_data.py) 
+
+
 
 ## Contact Details:
 
