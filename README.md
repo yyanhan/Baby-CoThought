@@ -51,9 +51,17 @@
     On January 23, 2017, President Donald Trump announced his intentions to nominate Wilson as Secretary of the Air Force. The United States Senate confirmed her nomination on May 8, 2017.
     On March 8, 2019, Wilson said that she would resign as Secretary, on May 31, 2019, in order to become President of the University of Texas at El Paso.
     ```
+
 * Output model: test on `https://huggingface.co/yaanhaan/Baby-CoThought`
 * Sample Output: a BERT or RoBERTa language model
-   
+
+* Applicable DBD:
+    mainly with text data, including:
+  1. Historical Narratives
+  2. Politicians in Wikipedia
+  3. TokTrack Wikipedia
+  4. Edit Histories of Wikipedia References
+     
 ## How to Use
 
 1. prepare your data, as long as your data is in text form. 
